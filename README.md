@@ -80,6 +80,23 @@
     }
 ```
 
+# Class References
+### [SimpleExoPlayerView](http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/SimpleExoPlayerView.html)
+A high level view for SimpleExoPlayer media playbacks. It displays video, subtitles and album art during playback, and displays playback controls using a PlaybackControlView.
+
+### [SimpleExoPlayer](http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html)
+
+##### Methods
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation" style="width: 769px; border-left: 1px solid rgb(238, 238, 238); border-right: 1px solid rgb(238, 238, 238); border-bottom: 1px solid rgb(238, 238, 238); padding: 0px; color: rgb(53, 56, 51); font-family: &quot;DejaVu Sans&quot;, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><tbody><tr id="i7" class="rowColor" style="background-color: rgb(238, 238, 239);"><td class="colFirst" style="text-align: left; padding: 8px 0px 3px 10px; width: 133px; vertical-align: top; white-space: nowrap; font-size: 13px;"><code style="font-family: &quot;DejaVu Sans Mono&quot;, monospace; font-size: 14px; padding-top: 4px; margin-top: 8px; line-height: 1.4em;"><a href="http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html" title="class in com.google.android.exoplayer2" style="text-decoration: none; color: rgb(74, 103, 130); font-weight: bold;">SimpleExoPlayer</a></code></td><td class="colLast" style="text-align: left; padding: 8px 0px 3px 10px; width: 616px; vertical-align: top; font-size: 13px;"><code style="font-family: &quot;DejaVu Sans Mono&quot;, monospace; font-size: 14px; padding-top: 4px; margin-top: 8px; line-height: 1.4em;"><span class="memberNameLink" style="font-weight: bold;"><a href="http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/SimpleExoPlayerView.html#getPlayer--" style="text-decoration: none; color: rgb(74, 103, 130); padding-bottom: 3px; font-weight: bold;">getPlayer</a></span>()</code><div class="block" style="display: block; margin: 3px 10px 2px 0px; color: rgb(71, 71, 71); font-size: 14px; font-family: &quot;DejaVu Serif&quot;, Georgia, &quot;Times New Roman&quot;, Times, serif; padding-top: 0px;">Returns the player currently set on this view, or null if no player is set</div></td></tr></tbody>
+<tbody><tr id="i22" class="altColor" style="background-color: rgb(255, 255, 255);"><td class="colFirst" style="text-align: left; padding: 8px 0px 3px 10px; width: 133px; vertical-align: top; white-space: nowrap; font-size: 13px;"><code style="font-family: &quot;DejaVu Sans Mono&quot;, monospace; font-size: 14px; padding-top: 4px; margin-top: 8px; line-height: 1.4em;">void</code></td><td class="colLast" style="text-align: left; padding: 8px 0px 3px 10px; width: 616px; vertical-align: top; font-size: 13px;"><code style="font-family: &quot;DejaVu Sans Mono&quot;, monospace; font-size: 14px; padding-top: 4px; margin-top: 8px; line-height: 1.4em;"><span class="memberNameLink" style="font-weight: bold;"><a href="http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/SimpleExoPlayerView.html#setPlayer-com.google.android.exoplayer2.SimpleExoPlayer-" style="text-decoration: none; color: rgb(74, 103, 130); padding-bottom: 3px; font-weight: bold;">setPlayer</a></span>(<a href="http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html" title="class in com.google.android.exoplayer2" style="text-decoration: none; color: rgb(74, 103, 130); padding-bottom: 3px; font-weight: bold;">SimpleExoPlayer</a> player)</code><div class="block" style="display: block; margin: 3px 10px 2px 0px; color: rgb(71, 71, 71); font-size: 14px; font-family: &quot;DejaVu Serif&quot;, Georgia, &quot;Times New Roman&quot;, Times, serif; padding-top: 0px;">Set the<span> </span><a href="http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html" title="class in com.google.android.exoplayer2" style="text-decoration: none; color: rgb(74, 103, 130); padding-bottom: 3px; font-weight: bold;"><code style="font-family: &quot;DejaVu Sans Mono&quot;, monospace; font-size: 14px; padding-top: 4px; margin-top: 8px; line-height: 1.4em;">SimpleExoPlayer</code></a><span> </span>to use.</div></td></tr></tbody>
+
+
+
+
+</table>
+
+
+
 # Screenshots
 <img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot1.png" width="300">
 <img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot2.png" width="300">
@@ -96,3 +113,5 @@
 [9]: https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/fcded4c54561a6e9156ccbc1c524a6241a9f8027/app/src/main/java/com/example/android/classicalmusicquiz/QuizActivity.java#L202-L203
 [10]: https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/fcded4c54561a6e9156ccbc1c524a6241a9f8027/app/src/main/java/com/example/android/classicalmusicquiz/QuizActivity.java#L217-L218
 [11]: https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/fcded4c54561a6e9156ccbc1c524a6241a9f8027/app/src/main/java/com/example/android/classicalmusicquiz/QuizActivity.java#L238-L245
+
+[SimpleExoPlayer]: http://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/SimpleExoPlayerView.html
