@@ -16,9 +16,9 @@
 11. Override onDestroy() to stop and release the player when the Activity is destroyed. [[code][11]]
 
 # Screenshots
-
-
-
+<img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot1.png" width="300">
+<img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot2.png" width="300">
+<img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot3.png" width="300">
 
 [1]: https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/6c8379e4ecb05dbdf342beaabfb626b2dd864e1f/app/src/main/res/layout/activity_quiz.xml#L24-L32
 [2]: https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/fcded4c54561a6e9156ccbc1c524a6241a9f8027/app/src/main/java/com/example/android/classicalmusicquiz/QuizActivity.java#L68-L69
