@@ -23,14 +23,62 @@
         Bitmap defaulatBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.question_mark);
         mExoPlayerView.setDefaultArtwork(defaulatBitmap);
 ```
+
 4. Create a Sample object using the Sample.getSampleByID() method and passing in mAnswerSampleID. [[code][4]]
+```java
+        Sample sample = Sample.getSampleByID(this, mAnswerSampleID);
+```
+
 5. Create a method called initializePlayer() that takes a Uri as an argument and call it here, passing in the Sample URI. [[code][5]]
+```java
+        initializePlayer(Uri.parse(sample.getUri()));
+```
+
 6. Instantiate a SimpleExoPlayer object using DefaultTrackSelector and DefaultLoadControl. [[code][6]]
+```java
+            TrackSelector defaultTrackSelector = new DefaultTrackSelector();
+            LoadControl defaultLoadControl = new DefaultLoadControl();
+            mExoPlayer = ExoPlayerFactory.newSimpleInstance(this, defaultTrackSelector, defaultLoadControl);
+            mExoPlayerView.setPlayer(mExoPlayer);
+```
+
 7. Prepare the MediaSource using DefaultDataSourceFactory and DefaultExtractorsFactory, as well as the Sample URI you passed in. [[code][7]]
+```java
+            String userAgent = Util.getUserAgent(this, "ClassicalMusicQuiz");
+            MediaSource mediaSource = new ExtractorMediaSource(
+                    uri,
+                    new DefaultDataSourceFactory(this, userAgent),
+                    new DefaultExtractorsFactory(),
+                    null,
+                    null);
+```
+
 8. Prepare the ExoPlayer with the MediaSource, start playing the sample and set the SimpleExoPlayer to the SimpleExoPlayerView. [[code][8]]
+```java
+            mExoPlayer.prepare(mediaSource);
+            mExoPlayer.setPlayWhenReady(true);
+```
+
 9. Stop the playback when you go to the next question. [[code][9]]
+```java
+            mExoPlayer.stop();
+```
+
 10. Change the default artwork in the SimpleExoPlayerView to show the picture of the composer, when the user has answered the question. [[code][10]]
+```java
+        mExoPlayerView.setDefaultArtwork(Sample.getComposerArtBySampleID(this, mAnswerSampleID));
+```
+
 11. Override onDestroy() to stop and release the player when the Activity is destroyed. [[code][11]]
+```java
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mExoPlayer.stop();
+        mExoPlayer.release();
+        mExoPlayer = null;
+    }
+```
 
 # Screenshots
 <img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot1.png" width="300">
