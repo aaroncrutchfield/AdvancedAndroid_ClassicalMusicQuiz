@@ -1,11 +1,28 @@
 # activity_quiz.xml
 1. Replace the Composer ImageView with a SimpleExoPlayerView that occupies the top half of your screen. [[code][1]]
-
-
+```xml
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/pv_exo_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalHalf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+```
 
 # QuizActivity.java
 2. Replace the ImageView with the SimpleExoPlayerView, and remove the method calls on the composerView. [[code][2]]
+```java
+        mExoPlayerView = (SimpleExoPlayerView) findViewById(R.id.pv_exo_player);
+```
+
 3. Replace the default artwork in the SimpleExoPlayerView with the question mark drawable. [[code][3]]
+```java        
+        // Load the image of the composer for the answer into the ImageView.
+        Bitmap defaulatBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.question_mark);
+        mExoPlayerView.setDefaultArtwork(defaulatBitmap);
+```
 4. Create a Sample object using the Sample.getSampleByID() method and passing in mAnswerSampleID. [[code][4]]
 5. Create a method called initializePlayer() that takes a Uri as an argument and call it here, passing in the Sample URI. [[code][5]]
 6. Instantiate a SimpleExoPlayer object using DefaultTrackSelector and DefaultLoadControl. [[code][6]]
