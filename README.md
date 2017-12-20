@@ -81,12 +81,28 @@
 ```
 
 # Class References
-![image](app/src/main/image.png)
+### [SimpleExoPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html)
+
+An [ExoPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ExoPlayer.html) implementation that uses default [Renderer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/Renderer.html) components. Instances can be obtained from [ExoPlayerFactory](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ExoPlayerFactory.html).
+
+|Return Type   |  Method Name |
+|:------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| void | [prepare](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html#prepare-com.google.android.exoplayer2.source.MediaSource-)([MediaSource](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/source/MediaSource.html) mediaSource) Prepares the player to play the provided [MediaSource](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/source/MediaSource.html).                    |
+| void | [release](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html#release--)() Releases the player.                                                                                                                                                                                                                                                                                                                                                |
+| void | [setPlayWhenReady](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html#setPlayWhenReady-boolean-)(boolean playWhenReady) Sets whether playback should proceed when [Player.getPlaybackState()](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/Player.html#getPlaybackState--) == [Player.STATE_READY](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/Player.html#STATE_READY). |
+| void | [stop](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html#stop--)() Stops playback.                                                                                                                                                                                                                                                                                                                                                           |
+
+### [SimpleExoPlayerView](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/SimpleExoPlayerView.html)
+
+A high level view for [SimpleExoPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html) media playbacks. It displays video, subtitles and album art during playback, and displays playback controls using a [PlaybackControlView](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/PlaybackControlView.html).
+
+|Return Type   |  Method Name|
+|:------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| void | [setDefaultArtwork](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/SimpleExoPlayerView.html#setDefaultArtwork-android.graphics.Bitmap-)([Bitmap](https://developer.android.com/reference/android/graphics/Bitmap.html?is-external=true) defaultArtwork) Sets the default artwork to display if useArtwork is true and no artwork is present in the media.                                                           |
+| void | [setPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ui/SimpleExoPlayerView.html#setPlayer-com.google.android.exoplayer2.SimpleExoPlayer-)([SimpleExoPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html) player) Set the [SimpleExoPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html) to use. |
 
 
-[Class Reference](Class%20Reference.one)
 
-[Class Reference](Class%20Reference.pdf)
 
 # Screenshots
 <img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot1.png" width="300">
