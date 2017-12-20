@@ -1,4 +1,6 @@
-# QuizActivity.java
+# Exercise 3 - Event Listening
+
+## QuizActivity.java
 
 1. Have this Activity implement ExoPlayer.EventListener and add the required methods.[[code][1]]
 ```java
@@ -28,7 +30,7 @@
 
 
 
-# Screenshots
+## Screenshots
 <img src="screenshots/screenshot1.png" width="300">
 
 
