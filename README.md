@@ -1,5 +1,7 @@
-# activity_quiz.xml
-1. Replace the Composer ImageView with a SimpleExoPlayerView that occupies the top half of your screen. [[code][1]]
+
+# Exercise 1 - Add SimpleExoPlayerView
+## *activity_quiz.xml*
+#### 1. Replace the Composer `ImageView` with a `SimpleExoPlayerView` that occupies the top half of your screen. [[code][1]]
 ```xml
     <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/pv_exo_player"
@@ -11,30 +13,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 ```
 
-# QuizActivity.java
-2. Replace the ImageView with the SimpleExoPlayerView, and remove the method calls on the composerView. [[code][2]]
+## *QuizActivity.java*
+#### 2. Replace the `ImageView` with the `SimpleExoPlayerView`, and remove the method calls on the composerView. [[code][2]]
 ```java
         mExoPlayerView = (SimpleExoPlayerView) findViewById(R.id.pv_exo_player);
 ```
 
-3. Replace the default artwork in the SimpleExoPlayerView with the question mark drawable. [[code][3]]
+#### 3. Replace the default artwork in the `SimpleExoPlayerView` with the question mark drawable. [[code][3]]
 ```java        
         // Load the image of the composer for the answer into the ImageView.
         Bitmap defaulatBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.question_mark);
         mExoPlayerView.setDefaultArtwork(defaulatBitmap);
 ```
 
-4. Create a Sample object using the Sample.getSampleByID() method and passing in mAnswerSampleID. [[code][4]]
+#### 4. Create a `Sample` object using the `Sample.getSampleByID()` method and passing in `mAnswerSampleID`. [[code][4]]
 ```java
         Sample sample = Sample.getSampleByID(this, mAnswerSampleID);
 ```
 
-5. Create a method called initializePlayer() that takes a Uri as an argument and call it here, passing in the Sample URI. [[code][5]]
+#### 5. Create a method called `initializePlayer()` that takes a `Uri` as an argument and call it here, passing in the Sample `URI`. [[code][5]]
 ```java
         initializePlayer(Uri.parse(sample.getUri()));
 ```
 
-6. Instantiate a SimpleExoPlayer object using DefaultTrackSelector and DefaultLoadControl. [[code][6]]
+#### 6. Instantiate a `SimpleExoPlayer` object using `DefaultTrackSelector` and `DefaultLoadControl`. [[code][6]]
 ```java
             TrackSelector defaultTrackSelector = new DefaultTrackSelector();
             LoadControl defaultLoadControl = new DefaultLoadControl();
@@ -42,7 +44,7 @@
             mExoPlayerView.setPlayer(mExoPlayer);
 ```
 
-7. Prepare the MediaSource using DefaultDataSourceFactory and DefaultExtractorsFactory, as well as the Sample URI you passed in. [[code][7]]
+#### 7. Prepare the `MediaSource` using `DefaultDataSourceFactory` and `DefaultExtractorsFactory`, as well as the Sample `URI` you passed in. [[code][7]]
 ```java
             String userAgent = Util.getUserAgent(this, "ClassicalMusicQuiz");
             MediaSource mediaSource = new ExtractorMediaSource(
@@ -53,23 +55,23 @@
                     null);
 ```
 
-8. Prepare the ExoPlayer with the MediaSource, start playing the sample and set the SimpleExoPlayer to the SimpleExoPlayerView. [[code][8]]
+#### 8. Prepare the `ExoPlayer` with the `MediaSource`, start playing the sample and set the `SimpleExoPlayer` to the `SimpleExoPlayerView`. [[code][8]]
 ```java
             mExoPlayer.prepare(mediaSource);
             mExoPlayer.setPlayWhenReady(true);
 ```
 
-9. Stop the playback when you go to the next question. [[code][9]]
+#### 9. Stop the playback when you go to the next question. [[code][9]]
 ```java
             mExoPlayer.stop();
 ```
 
-10. Change the default artwork in the SimpleExoPlayerView to show the picture of the composer, when the user has answered the question. [[code][10]]
+#### 10. Change the default artwork in the `SimpleExoPlayerView` to show the picture of the composer, when the user has answered the question. [[code][10]]
 ```java
         mExoPlayerView.setDefaultArtwork(Sample.getComposerArtBySampleID(this, mAnswerSampleID));
 ```
 
-11. Override onDestroy() to stop and release the player when the Activity is destroyed. [[code][11]]
+#### 11. Override `onDestroy()` to stop and release the player when the `Activity` is destroyed. [[code][11]]
 ```java
     @Override
     protected void onDestroy() {
@@ -80,7 +82,7 @@
     }
 ```
 
-# Class References
+## *Class References*
 ### [SimpleExoPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/SimpleExoPlayer.html)
 
 An [ExoPlayer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ExoPlayer.html) implementation that uses default [Renderer](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/Renderer.html) components. Instances can be obtained from [ExoPlayerFactory](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ExoPlayerFactory.html).
@@ -104,7 +106,7 @@ A high level view for [SimpleExoPlayer](https://google.github.io/ExoPlayer/doc/r
 
 
 
-# Screenshots
+## *Screenshots*
 <img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot1.png" width="300">
 <img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot2.png" width="300">
 <img src="https://github.com/aaroncrutchfield/AdvancedAndroid_ClassicalMusicQuiz/blob/TMED.01-Exercise-AddExoPlayer/screenshots/screenshot3.png" width="300">
