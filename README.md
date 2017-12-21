@@ -1,5 +1,7 @@
-# exo_playback_control_view.xml
-1. Create a layout file called exo_playback_control_view to override the playback control layout.[[code][1]]
+# Exercise 2 - Customize SimpleExoPlayerView
+
+## *exo_playback_control_view.xml*
+1. Create a layout file called `exo_playback_control_view.xml` to override the playback control layout.[[code][1]]
 ```xml
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -84,7 +86,7 @@
     </LinearLayout>
 ```
 
-# Screenshots
+## *Screenshots*
 <img src="screenshots/screenshot1.png" width="300">
 
 
