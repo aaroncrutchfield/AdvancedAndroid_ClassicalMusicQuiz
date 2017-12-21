@@ -1,13 +1,13 @@
 # Exercise 3 - Event Listening
 
-## QuizActivity.java
+## *QuizActivity.java*
 
-1. Have this Activity implement ExoPlayer.EventListener and add the required methods.[[code][1]]
+1. Have this Activity implement `ExoPlayer.EventListener` and add the required methods.[[code][1]]
 ```java
        public class QuizActivity extends AppCompatActivity implements View.OnClickListener, ExoPlayer.EventListener {
 ```
 
-2. Set the ExoPlayer.EventListener to this activity.[[code][2]]
+2. Set the `ExoPlayer.EventListener` to this activity.[[code][2]]
 
 ```java
             mExoPlayer.addListener(this);
@@ -15,7 +15,7 @@
 
 
 
-3. Add conditional logging statements to the onPlayerStateChanged() method that log when ExoPlayer is playing or paused.[[code][3]]
+3. Add conditional logging statements to the `onPlayerStateChanged()` method that log when ExoPlayer is **playing** or **paused**.[[code][3]]
 
 ```java
     @Override
@@ -30,7 +30,7 @@
 
 
 
-## Screenshots
+## *Screenshots*
 <img src="screenshots/screenshot1.png" width="300">
 
 
