@@ -117,9 +117,9 @@ Receives media buttons, transport controls, and commands from controllers and th
 
 |Return Type   |Method Name   |
 |:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `void` | [onPause](https://developer.android.com/reference/android/media/session/MediaSession.Callback.html#onPause())`()` Override to handle requests to pause playback. |
-| `void` | [onPlay](https://developer.android.com/reference/android/media/session/MediaSession.Callback.html#onPlay())`()` Override to handle requests to begin playback. |
-| `void` | [onSkipToPrevious](https://developer.android.com/reference/android/media/session/MediaSession.Callback.html#onSkipToPrevious())`()` Override to handle requests to skip to the previous media item. |
+| `void` | [onPause](https://developer.android.com/reference/android/media/session/MediaSession.Callback.html#onPause())`()` <br/>Override to handle requests to pause playback. |
+| `void` | [onPlay](https://developer.android.com/reference/android/media/session/MediaSession.Callback.html#onPlay())`()` <br/>Override to handle requests to begin playback. |
+| `void` | [onSkipToPrevious](https://developer.android.com/reference/android/media/session/MediaSession.Callback.html#onSkipToPrevious())`()` <br/>Override to handle requests to skip to the previous media item. |
 
 
 
