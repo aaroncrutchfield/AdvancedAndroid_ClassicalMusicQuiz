@@ -1,4 +1,4 @@
-# Exercise 3 - Event Listening
+# Exercise 3 - ExoPlayerEvent Listening
 
 ## *QuizActivity.java*
 
