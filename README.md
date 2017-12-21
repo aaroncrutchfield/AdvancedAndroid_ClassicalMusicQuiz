@@ -28,7 +28,13 @@
     }
 ```
 
+## *Class Reference*
 
+### Interface [ExoPlayer.EventListener](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/ExoPlayer.EventListener.html)
+
+|Return Type    |Method Name|
+|:---|:---|
+|void    | [onPlayerStateChanged](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/Player.EventListener.html#onPlayerStateChanged-boolean-int-)`(boolean playWhenReady, int playbackState)`<br/>Called when the value returned from either [`Player.getPlayWhenReady()`](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/Player.html#getPlayWhenReady--) or [`Player.getPlaybackState()`](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/Player.html#getPlaybackState--)changes.|
 
 ## *Screenshots*
 <img src="screenshots/screenshot1.png" width="300">
