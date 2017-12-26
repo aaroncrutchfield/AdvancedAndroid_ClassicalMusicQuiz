@@ -103,7 +103,7 @@ NotificationCompat.MediaStyle()
 
 
 ## _Screenshots_
-<img src="![1](screenshots/1.png)" width="300">
+<img src="screenshots/1.png" width="300">
 
 
 
