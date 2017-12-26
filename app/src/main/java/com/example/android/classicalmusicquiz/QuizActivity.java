@@ -192,36 +192,43 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     // COMPLETED (1): Create a method that shows a MediaStyle notification with two actions (play/pause, skip to previous). Clicking on the notification should launch this activity. It should take one argument that defines the state of MediaSession.
     private void showNotification(PlaybackStateCompat state){
+        // Initialize the notification builder
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
 
         int icon;
         String play_pause;
+        // If playing, show the pause icon and set the play_pause string to 'pause'
         if(state.getState() == PlaybackStateCompat.STATE_PLAYING){
             icon = R.drawable.exo_controls_pause;
             play_pause = getString(R.string.pause);
         } else  {
+            // Otherwise, show the play icon and set the play_pause string to 'play'
             icon = R.drawable.exo_controls_play;
             play_pause = getString(R.string.play);
         }
 
+        // Create a notification action to handle play and pause
         NotificationCompat.Action playPauseAction = new NotificationCompat.Action(
                 icon,
                 play_pause,
                 MediaButtonReceiver.buildMediaButtonPendingIntent(
                         this, PlaybackStateCompat.ACTION_PLAY_PAUSE));
 
+        // Create a notification action to handle skip to previous
         NotificationCompat.Action restartAction = new NotificationCompat.Action(
                 R.drawable.exo_controls_previous,
                 getString(R.string.restart),
                 MediaButtonReceiver.buildMediaButtonPendingIntent(
                         this, PlaybackStateCompat.ACTION_SKIP_TO_PREVIOUS));
 
+        // Create a pending intent to pass to the notification builder
         PendingIntent contentPendingIntent = PendingIntent.getActivity(
                 this,
                 0,
                 new Intent(this, QuizActivity.class),
                 0);
 
+        // Set up the notification build
         builder.setContentTitle(getString(R.string.guess))
                 .setContentText(getString(R.string.notification_text))
                 .setContentIntent(contentPendingIntent)
@@ -233,7 +240,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                         .setMediaSession(mMediaSession.getSessionToken())
                         .setShowActionsInCompactView(0, 1));
 
+        // Get the notification manager from the system service
         mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        // Call notify on the notification manager to display the notification
         mNotificationManager.notify(0, builder.build());
     }
     /**
