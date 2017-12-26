@@ -82,11 +82,6 @@
 
 
 ## _Class Reference_
-MediaButtonReciever
-    buildMediaButtonPendingIntent
-
-NotificationCompat.MediaStyle()
-
 ### [MediaButtonReceiver](https://developer.android.com/reference/android/support/v4/media/session/MediaButtonReceiver.html)
 
 |Return Type  |Method Name  |
