@@ -3,7 +3,7 @@
 
 ## _QuizActivity.java_
 
-#### 1. Create a method that shows a MediaStyle notification with two actions (play/pause, skip to previous). Clicking on the notification should launch this activity. It should take one argument that defines the state of MediaSession. [[code][1]]
+#### 1. Create a method that shows a `MediaStyle` notification with two actions (play/pause, skip to previous). Clicking on the notification should launch this activity. It should take one argument that defines the state of `MediaSession`. [[code][1]]
 ```java
     private void showNotification(PlaybackStateCompat state){
         // Initialize the notification builder
@@ -68,13 +68,13 @@
 ```
 
 
-#### 2. Call the method to show the notification, passing in the PlayBackStateCompat object. [[code][2]]
+#### 2. Call the method to show the notification, passing in the `PlayBackStateCompat` object. [[code][2]]
 ```java
         showNotification(mStateBuilder.build());
 ```
 
 
-#### 3. Cancel any notifications when releasing the ExoPlayer. [[code][3]]
+#### 3. Cancel any notifications when releasing the `ExoPlayer`. [[code][3]]
 
 ```java
         mNotificationManager.cancelAll();
